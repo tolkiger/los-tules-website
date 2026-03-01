@@ -19,14 +19,23 @@ from aws_cdk import (
 app = cdk.App()
 
 # Read environment variables (injected by CodeBuild)
-# For today: deploying without custom domain (will add later)
 site_name = os.environ.get("SITE_NAME", "los-tules-website")
-domain_name = os.environ.get("DOMAIN_NAME", "") or None  # Empty = no custom domain
-hosted_zone_id = os.environ.get("HOSTED_ZONE_ID", "") or None
-hosted_zone_name = os.environ.get("HOSTED_ZONE_NAME", "") or None
+
+# Domain configuration - convert empty strings to None
+domain_name = os.environ.get("DOMAIN_NAME", "").strip() or None
+hosted_zone_id = os.environ.get("HOSTED_ZONE_ID", "").strip() or None
+hosted_zone_name = os.environ.get("HOSTED_ZONE_NAME", "").strip() or None
+
+# Menu PDF configuration
 menu_pdf_enabled = os.environ.get("MENU_PDF_ENABLED", "true").lower() == "true"
 menu_pdf_bucket_name = os.environ.get("MENU_PDF_BUCKET_NAME", "los-tules-menu-files")
 menu_pdf_filename = os.environ.get("MENU_PDF_FILENAME", "los-tules-menu2026.pdf")
+
+# Debug: Print environment variables
+print(f"DEBUG: SITE_NAME={site_name}")
+print(f"DEBUG: DOMAIN_NAME={domain_name}")
+print(f"DEBUG: HOSTED_ZONE_ID={hosted_zone_id}")
+print(f"DEBUG: HOSTED_ZONE_NAME={hosted_zone_name}")
 
 # Build paths relative to this file
 infra_dir = os.path.dirname(os.path.abspath(__file__))
