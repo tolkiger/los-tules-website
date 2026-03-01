@@ -15,12 +15,12 @@ phases:
   
   build:
     commands:
+      - echo "Installing AWS CDK CLI..."
+      - npm install -g aws-cdk
       - echo "Building Next.js site..."
       - cd site
       - npm run build
       - cd ..
-      - echo "Installing AWS CDK CLI..."
-      - npm install -g aws-cdk
       - echo "Installing Python dependencies..."
       - cd infra
       - pip install -r requirements.txt
