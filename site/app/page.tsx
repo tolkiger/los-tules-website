@@ -174,11 +174,11 @@ export default function LosTulesRestaurant() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             <button onClick={() => scrollToSection("hero")} className="flex items-center gap-2 group">
               <Image 
-                src="/logo.png" 
+                src="/Los_Tules_logo_VERT.png?v=1"
                 alt="Los Tules Logo" 
-                width={40} 
-                height={40}
-                className="w-10 h-10 object-contain hover:scale-110 transition-transform duration-300"
+                width={80} 
+                height={80}
+                className="w-20 h-20 object-contain hover:scale-110 transition-transform duration-300"
               />
             </button>
             <div className="hidden md:flex items-center gap-1">
@@ -204,11 +204,11 @@ export default function LosTulesRestaurant() {
           </button>
           <div className="flex flex-col items-center gap-6">
             <Image 
-              src="/logo.png" 
+              src="/Los_Tules_logo_VERT.png?v=3"
               alt="Los Tules Logo" 
               width={80} 
               height={80}
-              className="w-20 h-20 object-contain mb-4"
+              className="w-28 h-28 object-contain mb-4"
             />
             {NAV_LINKS.map((link, i) => (
               <button key={link.href} onClick={() => scrollToSection(link.href)} className={`text-2xl font-medium transition-all duration-300 ${activeSection === link.href ? "text-amber-400" : "text-stone-300 hover:text-white"}`} style={{ transitionDelay: mobileMenuOpen ? `${i * 75}ms` : "0ms", transform: mobileMenuOpen ? "translateY(0)" : "translateY(20px)", opacity: mobileMenuOpen ? 1 : 0 }}>
@@ -230,16 +230,19 @@ export default function LosTulesRestaurant() {
           <div className={`transition-all duration-1000 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <div className="inline-flex items-center justify-center mb-8">
               <Image 
-                src="/logo.png" 
+                src="/Los_Tules_logo_VERT.png"
                 alt="Los Tules Logo" 
-                width={120} 
-                height={120}
-                className="w-32 h-32 object-contain drop-shadow-lg"
+                width={400} 
+                height={400}
+                className="w-90 h-90 sm:w-96 sm:h-96 object-contain drop-shadow-lg"
               />
             </div>
           </div>
-          <h1 className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 transition-all duration-1000 delay-200 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ fontFamily: "Georgia, serif" }}>
+          <h1 className={`text-center text-3xl sm:text-2xl md:text-5xl lg:text-6xl font-bold text-white mb-6 transition-all whitespace-nowrap duration-1000 delay-200 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ fontFamily: "Georgia, serif" }}>
             Los Tules
+          </h1>
+          <h1 className={`text-center text-1xl sm:text-1xl md:text-2xl lg:text-3xl font-light text-white mb-6 transition-all whitespace-nowrap duration-1000 delay-200 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ fontFamily: "Georgia, serif" }}>
+            Restaurante & Cantina
           </h1>
           <div className={`w-24 h-1 bg-gradient-to-r from-amber-400 via-orange-500 to-teal-500 mx-auto mb-6 rounded-full transition-all duration-1000 delay-300 ${heroVisible ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"}`} />
           <p className={`text-lg sm:text-xl md:text-2xl text-amber-100/80 font-light max-w-2xl mx-auto mb-10 leading-relaxed transition-all duration-1000 delay-500 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ fontFamily: "Georgia, serif" }}>
@@ -476,15 +479,15 @@ export default function LosTulesRestaurant() {
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Image 
-                src="/logo.png" 
+                src="/Los_Tules_logo_VERT.png?v=4"
                 alt="Los Tules Logo" 
-                width={50} 
-                height={50}
-                className="w-12 h-12 object-contain"
+                width={120} 
+                height={120}
+                className="w-56 h-56 object-contain"
               />
             </div>
-            <p className="text-stone-400 text-lg mb-2">Mexican Restaurant</p>
-            <p className="text-stone-500 italic max-w-md mx-auto" style={{ fontFamily: "Georgia, serif" }}>&ldquo;Bringing authentic Mexican flavor to Kansas City since day one&rdquo;</p>
+            <p className="text-stone-400 text-lg mb-2">Los Tules Restaurante & Cantina</p>
+            <p className="text-stone-500 italic max-w-md mx-auto whitespace-nowrap" style={{ fontFamily: "Georgia, serif" }}>&ldquo;Bringing authentic Mexican flavor to Kansas City since day one&rdquo;</p>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 mb-8">
             <p className="text-stone-400 text-sm">1656 Broadway Blvd, Kansas City, MO 64108</p>
