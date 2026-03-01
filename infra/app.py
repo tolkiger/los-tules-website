@@ -2,7 +2,7 @@
 """
 CDK Entry Point -- Uses shared website construct + adds menu PDF bucket.
 
-The shared-website-constructs handles the main website infrastructure.
+The shared-website-constructs code is included locally in this repo.
 We add the menu PDF bucket separately since it's specific to Los Tules.
 """
 import os
