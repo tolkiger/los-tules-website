@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -172,12 +173,13 @@ export default function LosTulesRestaurant() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             <button onClick={() => scrollToSection("hero")} className="flex items-center gap-2 group">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
-                <Star className="w-4 h-4 text-white fill-white" />
-              </div>
-              <span className={`text-xl lg:text-2xl font-bold tracking-wide transition-colors duration-300 ${scrolled ? "text-amber-100" : "text-white"} group-hover:text-amber-400`} style={{ fontFamily: "Georgia, serif" }}>
-                Los Tules
-              </span>
+              <Image 
+                src="/logo.png" 
+                alt="Los Tules Logo" 
+                width={40} 
+                height={40}
+                className="w-10 h-10 object-contain hover:scale-110 transition-transform duration-300"
+              />
             </button>
             <div className="hidden md:flex items-center gap-1">
               {NAV_LINKS.map((link) => (
@@ -201,9 +203,13 @@ export default function LosTulesRestaurant() {
             <X className="w-8 h-8" />
           </button>
           <div className="flex flex-col items-center gap-6">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mb-4">
-              <Star className="w-6 h-6 text-white fill-white" />
-            </div>
+            <Image 
+              src="/logo.png" 
+              alt="Los Tules Logo" 
+              width={80} 
+              height={80}
+              className="w-20 h-20 object-contain mb-4"
+            />
             {NAV_LINKS.map((link, i) => (
               <button key={link.href} onClick={() => scrollToSection(link.href)} className={`text-2xl font-medium transition-all duration-300 ${activeSection === link.href ? "text-amber-400" : "text-stone-300 hover:text-white"}`} style={{ transitionDelay: mobileMenuOpen ? `${i * 75}ms` : "0ms", transform: mobileMenuOpen ? "translateY(0)" : "translateY(20px)", opacity: mobileMenuOpen ? 1 : 0 }}>
                 {link.label}
@@ -222,10 +228,14 @@ export default function LosTulesRestaurant() {
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <div className={`transition-all duration-1000 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 mb-8">
-              <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
-              <span className="text-amber-200 text-sm font-medium tracking-wide">Kansas City&apos;s Favorite Mexican Restaurant</span>
-              <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
+            <div className="inline-flex items-center justify-center mb-8">
+              <Image 
+                src="/logo.png" 
+                alt="Los Tules Logo" 
+                width={120} 
+                height={120}
+                className="w-32 h-32 object-contain drop-shadow-lg"
+              />
             </div>
           </div>
           <h1 className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 transition-all duration-1000 delay-200 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ fontFamily: "Georgia, serif" }}>
@@ -465,8 +475,13 @@ export default function LosTulesRestaurant() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center"><Star className="w-5 h-5 text-white fill-white" /></div>
-              <h3 className="text-3xl font-bold text-amber-100" style={{ fontFamily: "Georgia, serif" }}>Los Tules</h3>
+              <Image 
+                src="/logo.png" 
+                alt="Los Tules Logo" 
+                width={50} 
+                height={50}
+                className="w-12 h-12 object-contain"
+              />
             </div>
             <p className="text-stone-400 text-lg mb-2">Mexican Restaurant</p>
             <p className="text-stone-500 italic max-w-md mx-auto" style={{ fontFamily: "Georgia, serif" }}>&ldquo;Bringing authentic Mexican flavor to Kansas City since day one&rdquo;</p>
