@@ -238,10 +238,10 @@ export default function LosTulesRestaurant() {
               />
             </div>
           </div>
-          <h1 className={`text-center text-3xl sm:text-2xl md:text-5xl lg:text-6xl font-bold text-white mb-6 transition-all whitespace-nowrap duration-1000 delay-200 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ fontFamily: "Georgia, serif" }}>
+          <h1 className={`text-center text-3xl sm:text-2xl md:text-5xl lg:text-6xl font-bold text-white mb-6 transition-all duration-1000 delay-200 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ fontFamily: "Georgia, serif" }}>
             Los Tules
           </h1>
-          <h1 className={`text-center text-1xl sm:text-1xl md:text-2xl lg:text-3xl font-light text-white mb-6 transition-all whitespace-nowrap duration-1000 delay-200 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ fontFamily: "Georgia, serif" }}>
+          <h1 className={`text-center text-1xl sm:text-1xl md:text-2xl lg:text-3xl font-bold text-white mb-6 transition-all duration-1000 delay-200 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ fontFamily: "Georgia, serif" }}>
             Restaurante & Cantina
           </h1>
           <div className={`w-24 h-1 bg-gradient-to-r from-amber-400 via-orange-500 to-teal-500 mx-auto mb-6 rounded-full transition-all duration-1000 delay-300 ${heroVisible ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"}`} />
@@ -487,7 +487,7 @@ export default function LosTulesRestaurant() {
               />
             </div>
             <p className="text-stone-400 text-lg mb-2">Los Tules Restaurante & Cantina</p>
-            <p className="text-stone-500 italic max-w-md mx-auto whitespace-nowrap" style={{ fontFamily: "Georgia, serif" }}>&ldquo;Bringing authentic Mexican flavor to Kansas City since day one&rdquo;</p>
+            <p className="text-stone-500 italic max-w-md mx-auto" style={{ fontFamily: "Georgia, serif" }}>&ldquo;Bringing authentic Mexican flavor to Kansas City since day one&rdquo;</p>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 mb-8">
             <p className="text-stone-400 text-sm">1656 Broadway Blvd, Kansas City, MO 64108</p>
