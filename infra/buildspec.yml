@@ -1,0 +1,30 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+      python: 3.12
+  
+  pre_build:
+    commands:
+      - echo "Installing Node.js dependencies..."
+      - cd site
+      - npm ci
+      - cd ..
+  
+  build:
+    commands:
+      - echo "Building Next.js site..."
+      - cd site
+      - npm run build
+      - cd ..
+      - echo "Installing Python dependencies..."
+      - cd infra
+      - pip install -r requirements.txt
+      - echo "Deploying with CDK..."
+      - cdk deploy --all --require-approval never
+
+artifacts:
+  files:
+    - '**/*'
