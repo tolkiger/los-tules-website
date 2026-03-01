@@ -36,6 +36,7 @@ print(f"DEBUG: SITE_NAME={site_name}")
 print(f"DEBUG: DOMAIN_NAME={domain_name}")
 print(f"DEBUG: HOSTED_ZONE_ID={hosted_zone_id}")
 print(f"DEBUG: HOSTED_ZONE_NAME={hosted_zone_name}")
+print(f"DEBUG: Environment variables loaded successfully")
 
 # Build paths relative to this file
 infra_dir = os.path.dirname(os.path.abspath(__file__))
