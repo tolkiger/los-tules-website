@@ -19,9 +19,13 @@ phases:
       - cd site
       - npm run build
       - cd ..
+      - echo "Installing AWS CDK CLI..."
+      - npm install -g aws-cdk
       - echo "Installing Python dependencies..."
       - cd infra
       - pip install -r requirements.txt
+      - echo "Setting PYTHONPATH for local shared-website-constructs..."
+      - export PYTHONPATH="${PYTHONPATH}:$(pwd)"
       - echo "Deploying with CDK..."
       - cdk deploy --all --require-approval never
 
