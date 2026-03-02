@@ -187,6 +187,7 @@ class WebsiteStack(Stack):
             ephemeral_storage_size=Size.mebibytes(1024),
             retain_on_delete=False,
             exclude=["*.map", ".git*"],
+            wait_for_distribution_invalidation=False,
         )
 
     def _create_route53_record(
