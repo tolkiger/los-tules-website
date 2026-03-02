@@ -4,6 +4,7 @@ from aws_cdk import (
     Stack,
     RemovalPolicy,
     CfnOutput,
+    Size,
     aws_s3 as s3,
     aws_s3_deployment as s3deploy,
     aws_cloudfront as cloudfront,
@@ -183,7 +184,7 @@ class WebsiteStack(Stack):
             distribution=self._distribution,
             distribution_paths=["/*"],
             memory_limit=512,
-            ephemeral_storage_size=1024,
+            ephemeral_storage_size=Size.mebibytes(1024),
             retain_on_delete=False,
             exclude=["*.map", ".git*"],
         )
