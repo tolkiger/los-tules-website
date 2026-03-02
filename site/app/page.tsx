@@ -28,18 +28,14 @@ const NAV_LINKS = [
 ];
 
 const GALLERY_ITEMS = [
-  { label: "Street Tacos", image: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=600&h=800&fit=crop" },
-  { label: "Signature Margarita", image: "https://images.unsplash.com/photo-1556855810-ac404aa91e85?w=600&h=400&fit=crop" },
-  { label: "Our Dining Room", image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop" },
-  { label: "Fresh Guacamole", image: "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&h=800&fit=crop" },
-  { label: "Enchiladas Suizas", image: "https://images.unsplash.com/photo-1534352956036-cd81e27dd615?w=600&h=400&fit=crop" },
-  { label: "The Bar", image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&h=800&fit=crop" },
-  { label: "Churros", image: "https://images.unsplash.com/photo-1624371414361-e670246e0a04?w=600&h=400&fit=crop" },
-  { label: "Patio Seating", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop" },
-  { label: "Mole Poblano", image: "https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?w=600&h=800&fit=crop" },
-  { label: "Craft Cocktails", image: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&h=400&fit=crop" },
-  { label: "Family Feast", image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&h=400&fit=crop" },
-  { label: "Live Music Night", image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop" },
+  { image: "/gallery/tacos.jpg" },
+  { image: "/gallery/margarita.jpg" },
+  { image: "/gallery/tortilla.jpg" },
+  { image: "/gallery/dish.jpg" },
+  { image: "/gallery/salad.jpg" },
+  { image: "/gallery/sangria.jpg" },
+  { image: "/gallery/shrimp.jpg" },
+  { image: "/gallery/side.jpg" },
 ];
 
 const HOURS = [
@@ -222,7 +218,7 @@ export default function LosTulesRestaurant() {
       {/* HERO */}
       <section ref={setSectionRef("hero")} className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1613514785940-daed07799d9b?w=1920&h=1080&fit=crop" alt="Colorful Mexican food spread" className="w-full h-full object-cover" />
+          <img src="/gallery/dish.jpg" alt="Colorful Mexican food spread" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-stone-900/70 via-stone-900/50 to-stone-900/80" />
         </div>
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
@@ -272,7 +268,7 @@ export default function LosTulesRestaurant() {
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-amber-200 to-orange-200 rounded-2xl rotate-2" />
                 <div className="relative aspect-[4/5] rounded-xl overflow-hidden border-4 border-amber-700/30 shadow-xl">
-                  <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=1000&fit=crop" alt="Warm restaurant interior" className="w-full h-full object-cover" />
+                  <img src="/gallery/sangria.jpg" alt="Warm restaurant interior" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-amber-900/20 to-transparent" />
                 </div>
               </div>
@@ -310,9 +306,9 @@ export default function LosTulesRestaurant() {
           </div>
           <div className="grid sm:grid-cols-3 gap-6 lg:gap-8 mb-16">
             {[
-              { icon: <Star className="w-8 h-8" />, title: "Authentic Recipes", desc: "Passed down through generations", image: "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=400&h=300&fit=crop", delay: 0 },
-              { icon: <Heart className="w-8 h-8" />, title: "Craft Margaritas", desc: "Handcrafted with fresh ingredients", image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop", delay: 150 },
-              { icon: <Users className="w-8 h-8" />, title: "Family Atmosphere", desc: "Where everyone feels at home", image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop", delay: 300 },
+              { icon: <Star className="w-8 h-8" />, title: "Authentic Recipes", desc: "Passed down through generations", image: "/gallery/tacos.jpg", delay: 0 },
+              { icon: <Heart className="w-8 h-8" />, title: "Craft Margaritas", desc: "Handcrafted with fresh ingredients", image: "/gallery/margarita.jpg", delay: 150 },
+              { icon: <Users className="w-8 h-8" />, title: "Family Atmosphere", desc: "Where everyone feels at home", image: "/gallery/tortilla.jpg", delay: 300 },
             ].map((card, i) => (
               <div key={i} className={`transition-all duration-700 ${visibleSections["menu"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: visibleSections["menu"] ? `${card.delay + 300}ms` : "0ms" }}>
                 <Card className="bg-white/5 border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:scale-105 hover:bg-white/10 group overflow-hidden">
@@ -355,11 +351,7 @@ export default function LosTulesRestaurant() {
               return (
                 <div key={i} ref={(el) => { galleryRefs.current[i] = el; }} data-gallery-index={i} className={`break-inside-avoid cursor-pointer group transition-all duration-700 ${galleryVisible[i] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: galleryVisible[i] ? `${(i % 4) * 100}ms` : "0ms" }} onClick={() => { setLightboxIndex(i); setLightboxOpen(true); }}>
                   <div className={`relative ${heights[i]} rounded-xl overflow-hidden shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02]`}>
-                    <img src={item.image} alt={item.label} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute inset-x-0 bottom-0 p-4 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                      <p className="text-white font-semibold text-sm drop-shadow-lg">{item.label}</p>
-                    </div>
+                    <img src={item.image} alt="Gallery image" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                 </div>
               );
@@ -377,12 +369,7 @@ export default function LosTulesRestaurant() {
               <X className="w-8 h-8" />
             </button>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <img src={GALLERY_ITEMS[lightboxIndex].image.replace(/w=\d+&h=\d+/, "w=1200&h=900")} alt={GALLERY_ITEMS[lightboxIndex].label} className="w-full h-full object-cover" />
-              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
-              <div className="absolute bottom-6 left-6">
-                <p className="text-white text-2xl font-bold drop-shadow-lg" style={{ fontFamily: "Georgia, serif" }}>{GALLERY_ITEMS[lightboxIndex].label}</p>
-                <p className="text-white/60 text-sm mt-1">{lightboxIndex + 1} of {GALLERY_ITEMS.length}</p>
-              </div>
+              <img src={GALLERY_ITEMS[lightboxIndex].image.replace(/w=\d+&h=\d+/, "w=1200&h=900")} alt="Gallery image" className="w-full h-full object-cover" />
             </div>
             <button onClick={() => setLightboxIndex((lightboxIndex - 1 + GALLERY_ITEMS.length) % GALLERY_ITEMS.length)} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 text-white/70 hover:text-white transition-colors p-2 hidden sm:block" aria-label="Previous">
               <ChevronLeft className="w-10 h-10" />
