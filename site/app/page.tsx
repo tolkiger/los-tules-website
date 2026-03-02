@@ -48,7 +48,7 @@ const HOURS = [
   { day: "Thursday", time: "11:00 AM – 10:00 PM" },
   { day: "Friday", time: "11:00 AM – 11:00 PM" },
   { day: "Saturday", time: "11:00 AM – 11:00 PM" },
-  { day: "Sunday", time: "11:00 AM – 9:00 PM" },
+  { day: "Sunday", time: "Closed" },
   { day: "Monday", time: "Closed" },
 ];
 
@@ -285,7 +285,7 @@ export default function LosTulesRestaurant() {
                   <span className="float-left text-6xl font-bold text-amber-700 mr-3 mt-1 leading-none" style={{ fontFamily: "Georgia, serif" }}>L</span>
                   os Tules is a beloved family-style Mexican restaurant nestled in the heart of Kansas City&apos;s vibrant Crossroads district, just steps from the Kauffman Center for the Performing Arts. For years, we have been a cornerstone of the community, bringing the rich flavors and warm hospitality of Mexico to the Midwest.
                 </p>
-                <p>Our recipes are rooted in authentic Mexican tradition — handmade tortillas pressed fresh daily, slow-cooked meats seasoned with generations-old spice blends, vibrant salsas crafted from the freshest ingredients, and signature margaritas that have become legendary among locals and visitors alike.</p>
+                <p>Our recipes are rooted in authentic Mexican tradition — slow-cooked meats seasoned with generations-old spice blends, vibrant salsas crafted from the freshest ingredients, and signature margaritas that have become legendary among locals and visitors alike.</p>
                 <p>Step inside and you&apos;ll find an atmosphere that is warm, colorful, and welcoming. Whether you&apos;re a longtime Kansas City local celebrating a family milestone or a first-time visitor exploring the Crossroads, Los Tules feels like home. Every dish tells a story, and every guest becomes part of our family.</p>
               </div>
             </div>
