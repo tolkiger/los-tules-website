@@ -4,6 +4,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -13,6 +15,8 @@ body {
   color: #1c1917;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 *,
@@ -22,4 +26,5 @@ body {
   border-width: 0;
   border-style: solid;
   border-color: #e7e5e4;
+  max-width: 100%;
 }
